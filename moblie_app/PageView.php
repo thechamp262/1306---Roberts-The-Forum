@@ -13,9 +13,6 @@ class PageView{
 	public function showHome(){
 		include("views/home.inc");
 	}
-	public function showJoin(){
-		include("views/join.inc");
-	}
 	public function showLogin(){
 		include("views/login.inc");
 	}

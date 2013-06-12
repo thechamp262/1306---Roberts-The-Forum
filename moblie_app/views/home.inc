@@ -3,7 +3,7 @@
 	<h1>The Forum</h1>
 	<ul>
 		<li><a href="#">Login</a></li>
-		<li><a href="#">Join</a></li>
+		<li><a href="views/join.php">Join</a></li>
 		<input type="search" name="search" placeholder="Search Artist"/>
 	</ul>
 </nav>
@@ -27,30 +27,14 @@
  -->
 <div id="topArtist">
 	<h2 id="tArtist">Top Artist:</h2>
-	<img width="#" height="#" class="topArtistPic" src="#">
-	<img width="#" height="#" class="topArtistPic" src="#">
-	<img width="#" height="#" class="topArtistPic" src="#">
-	<img width="#" height="#" class="topArtistPic" src="#">
-	<img width="#" height="#" class="topArtistPic" src="#">
-	<img width="#" height="#" class="topArtistPic" src="#">
-	<img width="#" height="#" class="topArtistPic" src="#">
-	<img width="#" height="#" class="topArtistPic" src="#">
 </div><!-- ends top artist -->
 
 <div id="topNews">
-	<h2 id="topNewLabel">Latest Reviews:</h2>
-	<article class="headline">
-		<h3 class="headlineName">This is a Headline</h3>
-		<p>This is a sample. This is a sample. This is a sample.</p>
-	</article> <!-- Ends headline -->
+	<h2 id="latestReviewsLabel">Latest News:</h2>
 </div> <!-- ends topNews -->
 
-<div id="latesReviews">
+<div id="latestReviews">
 	<h2 id="latestReviewsLabel">Latest Reviews:</h2>
-	<article class="reviews">
-		<img width="#" height="#" class="reviewPic" src="#">
-		<p class="reviewExample">This is a sample. This is a sample. This is a sample.</p>
-	</article> <!-- Ends headline -->
 </div> <!-- ends topNews -->
 
 

@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.25)
 # Database: theforum
-# Generation Time: 2013-06-12 04:01:53 +0000
+# Generation Time: 2013-06-12 20:11:09 +0000
 # ************************************************************
 
 
@@ -33,6 +33,18 @@ CREATE TABLE `userInfo` (
   PRIMARY KEY (`userID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+LOCK TABLES `userInfo` WRITE;
+/*!40000 ALTER TABLE `userInfo` DISABLE KEYS */;
+
+INSERT INTO `userInfo` (`userID`, `userName`, `userEmail`, `userPass`)
+VALUES
+	(3,'thechamp123','thechamp@champ.com','1a1dc91c907325c69271ddf0c944bc72'),
+	(4,'Jame0987','james@james.com','1a1dc91c907325c69271ddf0c944bc72'),
+	(5,'jojo','janedoetheend@ken.com','0ae57c94574802400bb2b31a4ac950ed'),
+	(6,'aquanM','a@pretend.com','1a1dc91c907325c69271ddf0c944bc72');
+
+/*!40000 ALTER TABLE `userInfo` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 
