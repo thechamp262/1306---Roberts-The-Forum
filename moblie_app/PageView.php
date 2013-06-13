@@ -19,10 +19,6 @@ class PageView{
 	public function showLogout(){
 		include("views/logout.inc");
 	}
-	public function showProfile(){
-		include("views/profile.inc");
-	}
-	
 }
 
 
