@@ -42,3 +42,4 @@ I will be adding a link that will take the user to a profile page of their fav a
 
 4 random photos will now be shown on the join page. I'm thinking about adding album artwork to the side to the sign-up form on that page. 
 
+Will added the ablity to delete profile 
