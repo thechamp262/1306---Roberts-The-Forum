@@ -4,7 +4,7 @@
 	//echo (ini_set("display_errors", 1));
 	require_once("../db.php");
 	require_once("../ForumModel.php");
-	$test = new ForumModel(MY_DSN, MY_USER, MY_PASS);
+	$test = new ForumModel();
 	$iew = $test->obtainProfileInfo($_SESSION['username']);
 ?>
 <!DOCTYPE html>

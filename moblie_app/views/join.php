@@ -5,7 +5,7 @@
 	require_once("../db.php");
 	require_once("../ForumModel.php");
 	
-	$model = new ForumModel(MY_DSN, MY_USER, MY_PASS);	
+	$model = new ForumModel();	
 	
 
 	/* Gathering all of the information that the user is typing into the 

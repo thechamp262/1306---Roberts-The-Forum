@@ -4,8 +4,8 @@
 
 	require_once("../db.php");
 	require_once("../ForumModel.php");
-	$test = new ForumModel(MY_DSN, MY_USER, MY_PASS);
-	$iew = $test->obtainProfileInfo($_SESSION['username']);
+	$test = new ForumModel();
+	$iew = $test->obtainProfileInfo($_SESSION['username']);//gathering all of the users info based on their username
 ?>
 
 <!DOCTYPE html>

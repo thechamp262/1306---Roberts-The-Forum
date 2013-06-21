@@ -4,7 +4,7 @@ class ForumModel{
 	
 	private $db;
 
-	public function __construct($dsn, $user, $pass){
+	public function __construct(){
 	
 		$this->db = mysql_connect("127.0.0.1", "root", "root");
 		
