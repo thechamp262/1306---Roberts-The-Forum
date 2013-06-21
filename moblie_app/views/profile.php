@@ -1,50 +1,62 @@
 <?php
 	require("../auth.php");
 	session_start();
+
+	require_once("../db.php");
+	require_once("../ForumModel.php");
+	$test = new ForumModel(MY_DSN, MY_USER, MY_PASS);
+	$iew = $test->obtainProfileInfo($_SESSION['username']);
 ?>
 
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<link rel="stylesheet" href="../css/main.css">
+			<link rel="stylesheet" href="../css/profile.css">
+			<title></title>
+		</head>
+		<body>
 
 <header>
 <nav id="home_nav">
-	<h1><a href="../index.php">The Forum</a></h1>
-	<ul>
+	<h1 id="logo"><a href="loginHome.php">The Forum</a></h1>
+	<p id="saying">Your Favorite Artist, All The Time.</p>
+	<ul id="navItems">
 		<li><a href="logout.php">Logout</a></li>
-		<li><a href="profile.php">Profile</a></li>
-		<input type="search" name="search" placeholder="Search Artist"/>
+		<li><a href="profile.php"><?php echo($_SESSION['username']);?></a></li>
 	</ul>
 </nav>
 </header>
 
-<div id="typeExample">
-	<h2 id="artistList">Favorite Artist</h3>
-	<ul>
-		<li>Eminem</li>
-		<li>Jay-z</li>
-		<li>Kid Rock</li>
-		<li>Adele</li>
-	</ul>
-</div><!-- ends typeExampl -->
-
 <section id="userInfo">
-	<img id="profilePic" src="#" width="#" height="#"/>
-	<h1><?php  echo("<h1 id='userName'>".$_SESSION['username']."</h1>");?></h1>
-	<p><a href="#">Edit Profile</a></p>
+<h1 id="name"><?php  echo($iew['firstName']);?></h1>
+	<img id="profilePic" src="../placeholderPic.png" width="#" height="#"/>
+		<p id="favArt"><?php echo($iew['firstName']);?>'s Favorite Artist: <?php echo($iew['favArtist']);?></p>
+		<p id="editLink"><a href="editProfile.php">Edit Profile</a></p>
 </section>
 
-<div id="topArtist">
-	<h2 id="tArtist">Top Artist:</h2>
-</div><!-- ends top artist -->
-
-<div id="topNews">
-	<h2 id="latestReviewsLabel">Latest News:</h2>
-</div> <!-- ends topNews -->
-
-<div id="latestReviews">
-	<h2 id="latestReviewsLabel">Latest Reviews:</h2>
-</div> <!-- ends topNews -->
-
-<?php
-
+<div id="typeExample">
 	
+</div><!-- ends typeExampl -->
 
-?>
+
+<div id="typeExample">
+</div><!-- ends typeExampl -->
+
+
+<div id="userBio">
+	<h2 id="bio">A little about <?php echo($iew['firstName']);?>:</h2>
+	<p id="theBio"><?php echo($iew['userBio']);?></p>
+</div> <!-- ends topNews -->
+
+<footer>
+			<ul id="footer">
+				<li><a href="loginHome.php">Home</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Contact us</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
+

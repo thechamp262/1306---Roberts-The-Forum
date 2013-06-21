@@ -1,0 +1,15 @@
+#latestReviews,#topNews,#topArtistInfo{
+	margin-right: 1.5%;
+}#topPics{
+	font-size: 1.5em;
+}#topArtistInfo{
+	font-size: 3em;
+	margin-bottom: 10px;
+}#latestNewsLabel{
+	font-size: 2.5em;
+	margin-top: 10px;
+	margin-bottom: -20px;
+}#reviewHead{
+	font-size: 2.6em;
+	margin-top: 10px;
+}

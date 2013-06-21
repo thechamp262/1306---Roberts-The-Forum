@@ -1,0 +1,35 @@
+/* the following css styles all forms for the site*/
+
+#joinForum, #joinForum1{
+	box-shadow: 2px 2px 5px #cbcaca;
+	margin-top: 10px;
+	width: 30%;
+	height:auto;
+	padding: .5%;
+}
+#jForm{
+	font-size: 2.3em;
+	font-weight: bold;
+	list-style: none;
+}#joinForum input, #joinForum1 input{
+	background-color: #6c6c6c;
+	width: 70%;
+	height: 30px;
+	color: #fff;
+	margin-top: 3px;
+	margin-bottom: 10px;
+	border: 2px solid #000;
+}#joinForum #subbtn, #joinForum1 #subbtn{
+	background-color: #000;
+	font-size: 1.1em;
+	width: 50%;
+	height: 35px;
+}#joinForum p, #joinForum1 p{
+	font-size: 1.8em;
+}#joinForum p a:link, #joinForum1 p a:link{
+	color: #000;
+}#joinForum p a:visited, #joinForum1 p a:visited{
+	color: #000;
+}#joinForum1{
+	margin-bottom: 260px;
+}
