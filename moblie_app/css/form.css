@@ -1,17 +1,17 @@
 /* the following css styles all forms for the site*/
 
-#joinForum, #joinForum1{
+#joinForum, #joinForum1,#editProfile{
 	box-shadow: 2px 2px 5px #cbcaca;
 	margin-top: 10px;
 	width: 30%;
 	height:auto;
 	padding: .5%;
 }
-#jForm{
+#jForm, #editForm{
 	font-size: 2.3em;
 	font-weight: bold;
 	list-style: none;
-}#joinForum input, #joinForum1 input{
+}#joinForum input, #joinForum1 input,#editForm input{
 	background-color: #6c6c6c;
 	width: 70%;
 	height: 30px;
@@ -19,7 +19,7 @@
 	margin-top: 3px;
 	margin-bottom: 10px;
 	border: 2px solid #000;
-}#joinForum #subbtn, #joinForum1 #subbtn{
+}#joinForum #subbtn, #joinForum1 #subbtn, #editForm #btn{
 	background-color: #000;
 	font-size: 1.1em;
 	width: 50%;
@@ -30,6 +30,54 @@
 	color: #000;
 }#joinForum p a:visited, #joinForum1 p a:visited{
 	color: #000;
-}#joinForum1{
-	margin-bottom: 260px;
+}#joinForum1, #editProfile{
+	margin-bottom: 360px;
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 600px){
+	#joinForum, #joinForum1,#editProfile{
+	box-shadow: none;
+	margin-top: 7px;
+	width: 80%;
+  }#jForm, #editForm{
+	font-size: 2.1em;
+  }#joinForum input, #joinForum1 input,#editForm input{
+	width: 50%;
+	margin-top: 3px;
+	margin-bottom: 7px;
+	border: 1px solid #000;
+  }#joinForum #subbtn, #joinForum1 #subbtn, #editForm #btn{
+	font-size: 1em;
+	width: 30%;
+	height: 35px;
+  }#joinForum p, #joinForum1 p{
+	font-size: 2.1em;
+  }#joinForum1, #editProfile{
+	margin-bottom: 360px;
+  }
+}
+
+/* Portrait phone to landscape and desktop */
+@media (max-width: 320px){
+	#joinForum, #joinForum1,#editProfile{
+	box-shadow: none;
+	margin-top: 5px;
+	width: 80%;
+  }#jForm, #editForm{
+	font-size: 1.8em;
+  }#joinForum input, #joinForum1 input,#editForm input{
+	width: 70%;
+	margin-top: 1px;
+	margin-bottom: 5px;
+	border: 1px solid #000;
+  }#joinForum #subbtn, #joinForum1 #subbtn, #editForm #btn{
+	font-size: .8em;
+	width: 50%;
+	height: 20px;
+  }#joinForum p, #joinForum1 p{
+	font-size: 1.8em;
+  }#joinForum1, #editProfile{
+	margin-bottom: 400px;
+  }
 }

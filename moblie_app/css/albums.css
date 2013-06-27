@@ -1,0 +1,45 @@
+.all_albums{
+	margin-right: 10px; 
+	width: 100%;
+}#album_artwork{
+	width: 18%;
+	height: 160px;
+	margin-bottom: 7px;
+	margin-right: .6%;
+	float: left;
+	box-shadow: 1px 1px 5px #d6d6d6;
+}#album_artwork:hover{
+	box-shadow: 1px 1px 5px #0924ec;
+}h1{
+	font-size: 3em;
+	color: #0924ec;
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 600px){
+
+#album_artwork{
+	width: 14%;
+	height: 90px;
+	margin-bottom: 7px;
+	margin-right: .4%;
+
+}h1{
+	font-size: 2.7em;
+}
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 320px){
+
+#album_artwork{
+	width: 16%;
+	height: 50px;
+	margin-bottom: 5px;
+	margin-right: .4%;
+}h1{
+	font-size: 2.4em;
+}
+
+}

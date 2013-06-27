@@ -6,49 +6,6 @@
 	require_once("../ForumModel.php");
 	
 	$model = new ForumModel();	
-	
-
-	/* Gathering all of the information that the user is typing into the 
-	form at sending it to the ForumModel joinSite Method if all parameters are met*/
-	if(isset($_POST["submit"])){
-		$userName = $_POST["userName"];
-		$email = $_POST["email"];
-		$favArtist = $_POST["artist"];
-		$password = $_POST["pass"];
-		$passCon = $_POST["passCon"];
-		$firstName = $_POST["firstName"];
-		
-		if(!empty($userName) && !empty($email) && !empty($favArtist) && !empty($password) && !empty($passCon) && !empty($firstName)){
-		
-		if($password == $passCon){
-		
-			$check = $model->checkUserNameID($userName);/*********if $check comes back true the user will
-			be added to the data base if not they will recieve an error messge*********/
-			
-			if($check){
-			
-			$model->joinSite($userName, $email, $password, $favArtist, $firstName);
-			echo("<h1 class='success'>Welcome to The Forum ".$userName."</h1>");
-			
-			}else{
-			
-				echo("<h3 id='error'>Sorry that username already exist!</h3>");
-				
-			}
-		}else{
-		
-			echo("<h1 class='error'>OOPS. Your passwords don't match.</h1>");
-			
-		}
-				
-		}else{
-		
-			echo("<h1 class='error'>Please fill out all fields!</h1>");
-			
-		};
-	};
-
-
 ?>
 
 <!DOCTYPE html>
@@ -66,6 +23,7 @@
 	<h1 id="logo"><a href="../index.php">The Forum</a></h1>
 	<p id="saying">Your Favorite Artist, All The Time.</p>
 	<ul id="navItems">
+		<li><a href="../index.php">Home</a></li>
 		<li><a href="login.php">Login</a></li>
 		<li><a href="join.php">Join</a></li>
 		<!--<input type="search" name="search" placeholder="Search Artist"/>-->
@@ -102,6 +60,39 @@
 		<li><input type="submit" value="submit" name="submit" id="subbtn"/></li>
 	</ul>
 	<p><a href="login.php">Already a member?<br/>Login Now!</a></p>		
+	<?php 
+	
+		/* Gathering all of the information that the user is typing into the 
+	form at sending it to the ForumModel joinSite Method if all parameters are met*/
+	if(isset($_POST["submit"])){
+		$userName = $_POST["userName"];
+		$email = $_POST["email"];
+		$favArtist = $_POST["artist"];
+		$password = $_POST["pass"];
+		$passCon = $_POST["passCon"];
+		$firstName = $_POST["firstName"];
+		
+		if(!empty($userName) && !empty($email) && !empty($favArtist) && !empty($password) && !empty($passCon) && !empty($firstName)){
+		
+		if($password == $passCon){
+		
+			$check = $model->checkUserNameID($userName);/*********if $check comes back true the user will
+			be added to the data base if not they will recieve an error messge*********/
+			
+			if($check){
+			$model->joinSite($userName, $email, $password, $favArtist, $firstName);
+			echo("<h1 class='success'>Welcome to The Forum ".$userName."</h1>");
+			}else{
+				echo("<h3 id='error'>Sorry that username already exist!</h3>");	
+			}
+		}else{
+			echo("<h3 class='error'>OOPS. Your passwords don't match.</h3>");	
+		}	
+		}else{
+			echo("<h3 class='error'>Please fill out all fields!</h3>");
+		};
+	};
+?>
 </form>
 </div> <!-- ends container -->
 <footer>
@@ -110,6 +101,7 @@
 				<li><a href="#">About us</a></li>
 				<li><a href="#">Contact us</a></li>
 			</ul>
+			<p id="echo">Site powered by:</br><a href="http://the.echonest.com">echonest.com</a></p>
 		</footer>
 		<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
 		<script type="text/javascript" src="../js/main.js"></script>

@@ -5,22 +5,6 @@ session_start();
 
 require_once("../ForumModel.php");
 require_once("../db.php");
-
-$results = "";
-
-if(isset($_POST["submit"])){
-	if(!empty($_POST["userName"]) && !empty($_POST["pass"])){//first we make sure that both fields are not empty
-		$model = new ForumModel(MY_DSN, MY_USER, MY_PASS);
-		$results = $model->userLogin($_POST["userName"],$_POST["pass"]);/*then we make sure that both the username and pass are found in the database*/
-		if($results){/*if they are both found within the same profile then a session is started and the user is sen to their profile page*/
-			$_SESSION["Authenticated"] = 1;
-			header("Location: profile.php");
-		}else{/* if they are not found then the user will recieve an error message */
-			$_SESSION["Authenticated"] = 0;	
-			echo("<h1 class='error'>Your User Name and/or Password is incorrect</h1>");
-		}
-	}
-}
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +22,7 @@ if(isset($_POST["submit"])){
 			<h1 id="logo"><a href="../index.php">The Forum</a></h1>
 			<p id="saying">Your Favorite Artist, All The Time.</p>
 			<ul id="navItems">
+				<li><a href="../index.php">Home</a></li>
 				<li><a href="../views/login.php">Login</a></li>
 				<li><a href="../views/join.php">Join</a></li>
 			</ul>
@@ -55,7 +40,24 @@ if(isset($_POST["submit"])){
 			<li><input type="password" name="pass" id="pass"/></li>
 			
 			<li><input type="submit" value="Login" name="submit"/></li>
-		</ul>		
+		</ul>
+		<?php
+				$results = "";
+
+if(isset($_POST["submit"])){
+	if(!empty($_POST["userName"]) && !empty($_POST["pass"])){//first we make sure that both fields are not empty
+		$model = new ForumModel(MY_DSN, MY_USER, MY_PASS);
+		$results = $model->userLogin($_POST["userName"],$_POST["pass"]);/*then we make sure that both the username and pass are found in the database*/
+		if($results){/*if they are both found within the same profile then a session is started and the user is sen to their profile page*/
+			$_SESSION["Authenticated"] = 1;
+			header("Location: profile.php");
+		}else{/* if they are not found then the user will recieve an error message */
+			$_SESSION["Authenticated"] = 0;	
+			echo("<h3 class='error'>Your User Name and/or Password is incorrect</h3>");
+		}
+	}
+}
+?>		
 	</form>
 	</div><!-- ends container -->
 		<footer>
@@ -63,6 +65,7 @@ if(isset($_POST["submit"])){
 				<li><a href="#">About us</a></li>
 				<li><a href="#">Contact us</a></li>
 			</ul>
+			<p id="echo">Site powered by:</br><a href="http://the.echonest.com">echonest.com</a></p>
 		</footer>
 	</body>
 </html>

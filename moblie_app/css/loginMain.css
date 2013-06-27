@@ -2,6 +2,7 @@
 	margin-right: 1.5%;
 }#topPics{
 	font-size: 1.5em;
+	color: #0924ec;
 }#topArtistInfo{
 	font-size: 3em;
 	margin-bottom: 10px;
@@ -9,7 +10,44 @@
 	font-size: 2.5em;
 	margin-top: 10px;
 	margin-bottom: -20px;
+	color: #0924ec;
 }#reviewHead{
 	font-size: 2.6em;
 	margin-top: 10px;
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 600px){
+
+	#topPics{
+	font-size: 1.3em;
+  }#topArtistInfo{
+	font-size: 2.5em;
+	margin-bottom: 7px;
+  }#latestNewsLabel{
+	font-size: 2.1em;
+	margin-top: 7px;
+	margin-bottom: 7px;
+  }#reviewHead{
+	font-size: 2.3em;
+	margin-top: 7px;
+  }
+}
+
+/* Portrait phone to landscape and desktop */
+@media (max-width: 320px){
+
+	#topPics{
+	font-size: 1em;
+  }#topArtistInfo{
+	font-size: 2.3em;
+	margin-bottom: 5px;
+  }#latestNewsLabel{
+	font-size: 1.8em;
+	margin-top: 5px;
+	margin-bottom: 5px;
+  }#reviewHead{
+	font-size: 2em;
+	margin-top: 5px;
+  }
 }

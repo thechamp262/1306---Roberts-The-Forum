@@ -43,3 +43,15 @@ I will be adding a link that will take the user to a profile page of their fav a
 4 random photos will now be shown on the join page. I'm thinking about adding album artwork to the side to the sign-up form on that page. 
 
 Will added the ablity to delete profile 
+
+Update: June 27th
+
+The error messages are where I want them to be.
+
+I've added the about us and contact us page(the email is not being sent)
+
+I've added a page that allows the user to view up to 25 of their fav artist albums and linked each photo to it's appopriate last fm page.
+
+I've added Some color to the logo and headers
+
+I have yet to link the about us and contact us page to every page of the site I will do so later. 

@@ -41,6 +41,10 @@ div,span,h1,h2,h3,h4,h5,h6,hgroup,p,a,section,article,body,li,ul,ol,nav,footer,f
 }#navItems  li a:visited{
 	color: #fff;
 	text-decoration-color: #000;
+}#currentPage{
+	color: #0924ec;
+}#currentPage{
+	color: #0924ec;
 }#container{
 	width: auto;
 	margin-left: 1.5%;
@@ -68,6 +72,8 @@ margin-bottom: 5px;
 	font-size: 2em;
 	margin-top: 10px;
 	margin-bottem: 25px;
+	color: #111896;
+	font-weight: bold;
 }.headline p{
 	font-size: 1.3em;
 	text-align: justify;
@@ -79,15 +85,16 @@ margin-bottom: 5px;
 	margin-top: 15px;
 	padding-top: 20px;
 	box-shadow: 3px 3px 5px #e3e3e3;
+	clear: both;
 }#echo{
 	float: right;
 	font-size: 2.5em;
 	margin-right: 1.5%;
 	margin-top: -40px;
 }#echo a:link{
-	color: #fff;
+	color: #0924ec;
 }#echo a:visited{
-	color:#fff;
+	color:#0924ec;
 }#footer{
 	font-size: 2.8em;
 }#footer li{
@@ -98,4 +105,107 @@ margin-bottom: 5px;
 	text-decoration: line-through;
 }#footer li a:visited{
 	color: #fff;
+}.error{
+	color: #f60303;
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 600px){ 
+    body{
+  max-width: 600px;
+  }.samplePics{
+	width: 17%;
+	height: 70px;
+	margin-top: 15px;
+	border: 2px #000 solid;
+	box-shadow: 3px 3px 5px #e3e3e3;
+	margin-top: 5px;
+  }.samplePics:hover{
+	border: 2px #000 solid;
+  }header{
+	height: 80px;
+  }#logo{ 
+	font-size: 3em;
+	margin-bottom: 5px;
+  }#saying/*Styles the text below the logo*/{
+	font-size: 1.2em;
+	margin-top: .002px;
+  }#navItems{
+	font-size: 1.1em;
+	margin-top: -50px;
+	float: right;
+  }#latestReviewsLabel{
+	font-size: 2em;
+	margin-top: 7px;
+  }.headline{
+	margin-top: 7px;
+  }.headline h3{
+	font-size: 1.8em;
+	margin-top: 7px;
+	margin-bottem:7px;
+  }.headline p{
+	font-size: 1.3em;
+  }footer{
+	height: 50px;
+	margin-top: 7px;
+  }#echo{
+	float: right;
+	font-size: 1.5em;
+	margin-top: -18px;
+  }#footer{
+	font-size: 1.5em;
+  }
+}#about_info{
+	margin-bottom: 400px;
+}
+	    
+
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 320px){ 
+    body {
+      max-width: 320px;
+  }.samplePics{
+	width: 16.875%;
+	height: 65px;
+	margin-top: 12px;
+	border: 2px #000 solid;
+	box-shadow: 3px 3px 5px #e3e3e3;
+	margin-top: 2px;
+  }.samplePics:hover{
+	border: 2px #000 solid;
+  }header{
+	height: 60px;
+  }#logo{ 
+	font-size: 3em;
+	padding-top: 15px;
+  }#saying/*Styles the text below the logo*/{
+	display: none;
+  }#navItems{
+	font-size: 1em;
+	margin-top: -45px;
+	float: right;
+  }#latestReviewsLabel{
+	font-size: 1.8em;
+	margin-top: 5px;
+  }.headline{
+	margin-top: 5px;
+  }.headline h3{
+	font-size: 1.5em;
+	margin-top: 5px;
+	margin-bottem:5px;
+  }.headline p{
+	font-size: 1em;
+  }footer{
+	height: 50px;
+	margin-top: 5px;
+  }#echo{
+	float: right;
+	font-size: 1.2em;
+	margin-top: -18px;
+  }#footer{
+	font-size: 1.3em;
+  }footer{
+	height: 50px;
+	margin-top: 5px;
+  }
 }

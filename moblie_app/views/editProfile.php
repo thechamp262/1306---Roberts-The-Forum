@@ -19,17 +19,28 @@
 	}
 ?>
 
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/form.css">
+	<title>Edit Profile</title>
+</head>
+
 <header>
 <nav id="home_nav">
-	<h1><a href="loginHome.php">The Forum</a></h1>
-	<ul>
+	<h1 id="logo"><a href="loginHome.php">The Forum</a></h1>
+	<p id="saying">Your Favorite Artist, All The Time.</p>
+	<ul id="navItems">
+		<li><a href="loginHome.php">Home</a></li>
+		<li><a href="albums.php">Albums</a></li>
 		<li><a href="logout.php">Logout</a></li>
 		<li><a href="profile.php"><?php echo($_SESSION['username']);?></a></li>
 		<!--<input type="search" name="search" placeholder="Search Artist"/>-->
 	</ul>
 </nav>
 </header>
-
+<div id="container">
 <form action="" id="editProfile" method="post">
 	<ul id="editForm">				
 		<li><label for="email">Email:</label></li>
@@ -41,7 +52,18 @@
 		<li><label for="bio">Tell Us a Little About You:</label></li>
 		<li><input type="text" name="bio" id="bio" value="<?php echo($getInfo['userBio']);?>"/></li>
 						
-		<li><input type="submit" value="submit" name="submit"/></li>
+		<li><input type="submit" value="submit" name="submit" id="btn"/></li>
 	</ul>		
 </form>
+</div><!-- ends container -->
 
+<footer>
+			<ul id="footer">
+				<li><a href="loginHome.php">Home</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Contact us</a></li>
+			</ul>
+			<p id="echo">Site powered by:</br><a href="http://the.echonest.com">echonest.com</a></p>
+		</footer>
+	</body>
+</html>

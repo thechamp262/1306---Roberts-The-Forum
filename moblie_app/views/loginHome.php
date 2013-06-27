@@ -21,6 +21,8 @@
 	<h1 id="logo"><a href="loginHome.php">The Forum</a></h1>
 	<p id="saying">Your Favorite Artist, All The Time.</p>
 	<ul id="navItems">
+		<li><a id="now" href="loginHome.php">Home</a></li>
+		<li><a href="albums.php">Albums</a></li>
 		<li><a href="logout.php">Logout</a></li>
 		<li><a href="profile.php"><?php echo($_SESSION['username']);?></a></li><!-- obtaining the name of the user to be added for display on the profile -->
 
@@ -52,7 +54,7 @@
 		<footer>
 			<ul id="footer">
 				<li><a href="loginHome.php">Home</a></li>
-				<li><a href="#">About us</a></li>
+				<li><a href="about.php">About us</a></li>
 				<li><a href="#">Contact us</a></li>
 			</ul>
 			<p id="echo">Site powered by:</br><a href="http://the.echonest.com">echonest.com</a></p>
