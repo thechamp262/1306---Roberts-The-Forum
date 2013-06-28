@@ -1,5 +1,7 @@
 Mobile Device Deplotment 1306
 
+*****If it's not working check your port num and make sure it's 3306 ******
+
 mysql info:
 databaseName:theforum
 tableName: userInfo
