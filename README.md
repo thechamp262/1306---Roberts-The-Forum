@@ -55,3 +55,12 @@ I've added a page that allows the user to view up to 25 of their fav artist albu
 I've added Some color to the logo and headers
 
 I have yet to link the about us and contact us page to every page of the site I will do so later. 
+
+Update: June 27th part2
+The success messages now show in green
+
+I've added more comments
+
+I've changed the logo font
+
+I've added the about and contact pages to every page on the site
