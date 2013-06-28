@@ -5,6 +5,8 @@ databaseName:theforum
 tableName: userInfo
 Password:root
 user: root
+port: 3306
+host: 127.0.0.1
 
 Update: June 12th 
 
