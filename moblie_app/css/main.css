@@ -2,6 +2,9 @@ div,span,h1,h2,h3,h4,h5,h6,hgroup,p,a,section,article,body,li,ul,ol,nav,footer,f
 	margin: 0;
 	padding: 0;
 	border: none;
+}@font-face{
+	font-family: myGirl;
+	src: url("../fonts/MyGirlIsRetroDEMO.ttf");
 }body{
 	font-size: 10px;
 	font-family: Helvetica;
@@ -17,6 +20,7 @@ div,span,h1,h2,h3,h4,h5,h6,hgroup,p,a,section,article,body,li,ul,ol,nav,footer,f
 	font-size: 5.5em;
 	margin-left: 1.5%;
 	margin-bottom: 8px;
+	font-family:  myGirl;
 }#logo a:link{
 	color: #0924ec;
 	text-decoration: none;
@@ -26,6 +30,7 @@ div,span,h1,h2,h3,h4,h5,h6,hgroup,p,a,section,article,body,li,ul,ol,nav,footer,f
 	font-size: 1.7em;
 	margin-left: 1.5%;
 	margin-top: -15px;
+	font-family:  myGirl;
 }#navItems li{
 	list-style: none;
 	display: inline;
@@ -68,7 +73,7 @@ margin-bottom: 5px;
 	margin-top: 25px;
 	border: 2px #000 solid;
 	padding: .8%;
-}.headline h3{
+}.headline h3,.reviewHeadline{
 	font-size: 2em;
 	margin-top: 10px;
 	margin-bottem: 25px;
@@ -107,6 +112,8 @@ margin-bottom: 5px;
 	color: #fff;
 }.error{
 	color: #f60303;
+}.success{
+	color: #14c604;
 }
 
 /* Portrait tablet to landscape and desktop */
@@ -157,8 +164,7 @@ margin-bottom: 5px;
   }
 }#about_info{
 	margin-bottom: 400px;
-}
-	    
+}	    
 
 /* Portrait tablet to landscape and desktop */
 @media (max-width: 320px){ 
@@ -198,6 +204,7 @@ margin-bottom: 5px;
   }footer{
 	height: 50px;
 	margin-top: 5px;
+	
   }#echo{
 	float: right;
 	font-size: 1.2em;

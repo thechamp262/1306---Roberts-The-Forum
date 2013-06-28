@@ -46,7 +46,7 @@
 </div> <!-- ends topNews -->
 
 <div id="latestReviews"><!-- might move latestReviews to it's own page -->
-	<h2 id="reviewHead">Latest Album Reviews:</h2>
+	<h2 id="latestNewsLabel">Latest Album Reviews:</h2>
 </div>
 </div> <!-- Ends container -->
 
@@ -54,8 +54,8 @@
 		<footer>
 			<ul id="footer">
 				<li><a href="loginHome.php">Home</a></li>
-				<li><a href="about.php">About us</a></li>
-				<li><a href="#">Contact us</a></li>
+				<li><a href="login_about.php">About us</a></li>
+				<li><a href="login_contact.php">Contact us</a></li>
 			</ul>
 			<p id="echo">Site powered by:</br><a href="http://the.echonest.com">echonest.com</a></p>
 		</footer>

@@ -6,17 +6,8 @@
 	require_once("../db.php");
 	require_once("../ForumModel.php");
 	$test = new ForumModel(MY_DSN, MY_USER, MY_PASS);
-	
 	$getInfo = $test->obtainProfileInfo($_SESSION['username']);
 	
-	if(isset($_POST['submit'])){
-		$try = $test->updateProfile($_POST['email'],$_POST['bio'],$_POST['artist'],$getInfo['userID']);
-		$getInfo = $test->obtainProfileInfo($_SESSION['username']);
-		echo("<h1 id='success'>Your Profile has been Updated ".$getInfo['firstName'].".</h3>");
-		echo($getInfo['userID']);
-		echo($try);
-
-	}
 ?>
 
 <html lang="en">
@@ -36,12 +27,19 @@
 		<li><a href="albums.php">Albums</a></li>
 		<li><a href="logout.php">Logout</a></li>
 		<li><a href="profile.php"><?php echo($_SESSION['username']);?></a></li>
-		<!--<input type="search" name="search" placeholder="Search Artist"/>-->
 	</ul>
 </nav>
 </header>
 <div id="container">
 <form action="" id="editProfile" method="post">
+<?php 
+	if(isset($_POST['submit'])){
+		$try = $test->updateProfile($_POST['email'],$_POST['bio'],$_POST['artist'],$getInfo['userID']);
+		$getInfo = $test->obtainProfileInfo($_SESSION['username']);
+		echo("<h1 class='success'>Your Profile has been Updated ".$getInfo['firstName'].".</h3>");
+	}
+?>	
+
 	<ul id="editForm">				
 		<li><label for="email">Email:</label></li>
 		<li><input type="email" name="email" id="email" value="<?php echo($getInfo['userEmail']);?>"/></li>
@@ -53,15 +51,17 @@
 		<li><input type="text" name="bio" id="bio" value="<?php echo($getInfo['userBio']);?>"/></li>
 						
 		<li><input type="submit" value="submit" name="submit" id="btn"/></li>
-	</ul>		
-</form>
+	</ul>
+	
+	<!-- the following php will obtain all of the information entered in the for and use that info to change the appropriate data in the database-->	
+	</form>
 </div><!-- ends container -->
 
 <footer>
 			<ul id="footer">
 				<li><a href="loginHome.php">Home</a></li>
-				<li><a href="#">About us</a></li>
-				<li><a href="#">Contact us</a></li>
+				<li><a href="login_about.php">About us</a></li>
+				<li><a href="login_contact.php">Contact us</a></li>
 			</ul>
 			<p id="echo">Site powered by:</br><a href="http://the.echonest.com">echonest.com</a></p>
 		</footer>

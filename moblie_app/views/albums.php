@@ -39,8 +39,8 @@
 		<footer>
 			<ul id="footer">
 				<li><a href="loginHome.php">Home</a></li>
-				<li><a href="#">About us</a></li>
-				<li><a href="#">Contact us</a></li>
+				<li><a href="login_about.php">About us</a></li>
+				<li><a href="login_contact.php">Contact us</a></li>
 			</ul>
 			<p id="echo">Site powered by:</br><a href="http://the.echonest.com">echonest.com</a></p>
 		</footer>

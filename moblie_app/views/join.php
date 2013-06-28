@@ -1,7 +1,6 @@
 <?php
 	//echo (error_reporting(E_ALL));
 	echo (ini_set("display_errors", 1));
-
 	require_once("../db.php");
 	require_once("../ForumModel.php");
 	
@@ -39,27 +38,6 @@
 <!-- all info that the user input into this form will be used by the php above -->
 <form action="" id="joinForum" method="post">
 	<ul id="jForm">
-		<li><label for="userName">UserName:</label></li>
-		<li><input type="text" name="userName" id="userName"/></li>
-		
-		<li><label for="firstName">First Name:</label></li>
-		<li><input type="text" name="firstName" id="firstName"/></li>
-		
-		<li><label for="email">Email:</label></li>
-		<li><input type="email" name="email" id="email"/></li>
-		
-		<li><label for="FavoriteArtist">Your Favorite Artist:</label></li>
-		<li><input type="text" name="artist" id="artist"/></li>
-		
-		<li><label for="pass">Password:</label></li>
-		<li><input type="password" name="pass" id="pass"/></li>
-		
-		<li><label for="passCon">Conform Password:</label></li>
-		<li><input type="password" name="passCon" id="passCon"/></li>
-		
-		<li><input type="submit" value="submit" name="submit" id="subbtn"/></li>
-	</ul>
-	<p><a href="login.php">Already a member?<br/>Login Now!</a></p>		
 	<?php 
 	
 		/* Gathering all of the information that the user is typing into the 
@@ -81,7 +59,7 @@
 			
 			if($check){
 			$model->joinSite($userName, $email, $password, $favArtist, $firstName);
-			echo("<h1 class='success'>Welcome to The Forum ".$userName."</h1>");
+			echo("<h3 class='success'>Welcome to The Forum ".$userName."</h3>");
 			}else{
 				echo("<h3 id='error'>Sorry that username already exist!</h3>");	
 			}
@@ -93,13 +71,34 @@
 		};
 	};
 ?>
+		<li><label for="userName">UserName:</label></li>
+		<li><input type="text" name="userName" id="userName"/></li>
+		
+		<li><label for="firstName">First Name:</label></li>
+		<li><input type="text" name="firstName" id="firstName"/></li>
+		
+		<li><label for="email">Email:</label></li>
+		<li><input type="email" name="email" id="email"/></li>
+		
+		<li><label for="FavoriteArtist">Your Favorite Artist:</label></li>
+		<li><input type="text" name="artist" id="artist"/></li>
+		
+		<li><label for="pass">Password:</label></li>
+		<li><input type="password" name="pass" id="pass"/></li>
+		
+		<li><label for="passCon">Conform Password:</label></li>
+		<li><input type="password" name="passCon" id="passCon"/></li>
+		
+		<li><input type="submit" value="submit" name="submit" id="subbtn"/></li>
+	</ul>
+	<p><a href="login.php">Already a member?<br/>Login Now!</a></p>		
 </form>
 </div> <!-- ends container -->
 <footer>
 			<ul id="footer">
 				<li><a href="../index.php">Home</a></li>
-				<li><a href="#">About us</a></li>
-				<li><a href="#">Contact us</a></li>
+				<li><a href="about.php">About us</a></li>
+				<li><a href="contact.php">Contact us</a></li>
 			</ul>
 			<p id="echo">Site powered by:</br><a href="http://the.echonest.com">echonest.com</a></p>
 		</footer>

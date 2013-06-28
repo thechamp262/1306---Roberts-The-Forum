@@ -1,10 +1,27 @@
 <?php
 session_start();
 
-//echo (ini_set("display_errors", 1));
+echo (ini_set("display_errors", 1));
 
 require_once("../ForumModel.php");
 require_once("../db.php");
+
+$results = "";
+
+if(isset($_POST["submit"])){
+	if(!empty($_POST["userName"]) && !empty($_POST["pass"])){//first we make sure that both fields are not empty
+		$model = new ForumModel(MY_DSN, MY_USER, MY_PASS);
+		$results = $model->userLogin($_POST["userName"],$_POST["pass"]);/*then we make sure that both the username and pass are found in the database*/
+		if($results){/*if they are both found within the same profile then a session is started and the user is sen to their profile page*/
+			$_SESSION["Authenticated"] = 1;
+			header("Location: profile.php");
+		}else{/* if they are not found then the user will recieve an error message */
+			$_SESSION["Authenticated"] = 0;	
+			echo("<h3 class='error'>Your User Name and/or Password is incorrect</h3>");
+		}
+	}
+}	
+
 ?>
 
 <!DOCTYPE html>
@@ -40,24 +57,7 @@ require_once("../db.php");
 			<li><input type="password" name="pass" id="pass"/></li>
 			
 			<li><input type="submit" value="Login" name="submit"/></li>
-		</ul>
-		<?php
-				$results = "";
-
-if(isset($_POST["submit"])){
-	if(!empty($_POST["userName"]) && !empty($_POST["pass"])){//first we make sure that both fields are not empty
-		$model = new ForumModel(MY_DSN, MY_USER, MY_PASS);
-		$results = $model->userLogin($_POST["userName"],$_POST["pass"]);/*then we make sure that both the username and pass are found in the database*/
-		if($results){/*if they are both found within the same profile then a session is started and the user is sen to their profile page*/
-			$_SESSION["Authenticated"] = 1;
-			header("Location: profile.php");
-		}else{/* if they are not found then the user will recieve an error message */
-			$_SESSION["Authenticated"] = 0;	
-			echo("<h3 class='error'>Your User Name and/or Password is incorrect</h3>");
-		}
-	}
-}
-?>		
+		</ul>	
 	</form>
 	</div><!-- ends container -->
 		<footer>

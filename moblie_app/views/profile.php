@@ -33,7 +33,7 @@
 
 <section id="userInfo">
 <h1 id="name"><?php  echo($iew['firstName']);?></h1>
-	<img id="profilePic" src="../placeholderPic.png" width="#" height="#"/>
+	<img id="profilePic" src="../images/placeholderPic.png" width="#" height="#"/>
 		<p id="favArt"><?php echo($iew['firstName']);?>'s Favorite Artist: <?php echo($iew['favArtist']);?></p>
 		<p id="editLink"><a href="editProfile.php">Edit Profile</a></p>
 </section>
@@ -55,8 +55,8 @@
 <footer>
 			<ul id="footer">
 				<li><a href="loginHome.php">Home</a></li>
-				<li><a href="#">About us</a></li>
-				<li><a href="#">Contact us</a></li>
+				<li><a href="login_about.php">About us</a></li>
+				<li><a href="login_contact.php">Contact us</a></li>
 			</ul>
 			<p id="echo">Site powered by:</br><a href="http://the.echonest.com">echonest.com</a></p>
 		</footer>

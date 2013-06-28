@@ -38,10 +38,10 @@ $(function(){
 		var review = $.getJSON("http://developer.echonest.com/api/v4/artist/reviews?api_key=HOYPYS9L91ACFQXGM&name="+artist+"&format=json&results=1&start=0", function(data){
 		
 			var data = data.response.reviews;
-			//console.log(data);
+			//console.log(data[0]);
 			var i = 0;
 			while(i < data.length){
-				$("#latestReviews").append("<article class='reviews'><h4>"+data[i].name+"</h4><p class='reviewExample'>"+data[i].summary+"</p> <p><a href='"+data[i].url+"'>Read More!</a></p></article>");
+				$("#latestReviews").append("<article class='headline'><h4 class='reviewHeadline'>"+data[i].name+"</h4><p class='reviewExample'>"+data[i].summary+"</p> <p><a href='"+data[i].url+"'>Read More!</a></p></article>");
 	i++;
 			};
 
